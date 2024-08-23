@@ -43,3 +43,10 @@ Este projeto é uma API RESTful desenvolvida em Java utilizando o framework Spri
 - `ObterTodas()`: Obtém todas as disciplinas.
 - `ObterDisciplinasComAlunos()`: Obtém todas as disciplinas com seus respectivos alunos.
 - `ObterDisciplinaComAlunosPorId(Integer id)`: Obtém uma disciplina com seus alunos pelo ID.
+
+
+#### Conclusão 
+
+- Projeto realizado como forma de avaliação da disciplina de PROGRAMAÇÃO 1, do curso de Análise e Desenvolvimento de Sistema
+- Instituto Federal de Sergipe
+- Diogo Leonardo Lima e Silva
