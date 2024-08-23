@@ -1,4 +1,4 @@
-# API News SIGAA
+# API New SIGAA
 
 ## Descrição
 
