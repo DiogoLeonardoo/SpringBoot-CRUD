@@ -22,7 +22,7 @@ public class AlunoController {
     @Autowired
     private AlunoRepository alunoRepository;
 
-    @GetMapping
+    @GetMapping("/todos")
     public ResponseEntity<ApiResponse<List<AlunoDto>>> ObterTodos() {
         List<AlunoDto> alunoDtoList = alunoService.ObterTodos();
         String message = alunoDtoList.isEmpty() ? "Nenhum aluno encontrado!" : "Alunos encontrados com sucesso!";
@@ -45,14 +45,15 @@ public class AlunoController {
         return ResponseEntity.ok(response);
     }
 
-    @PostMapping
+
+    @PostMapping("/salvar")
     public ResponseEntity<ApiResponse<AlunoDto>> Salvar(@RequestBody @Valid AlunoModel novoAluno) {
         AlunoDto alunoDto = alunoService.salvar(novoAluno);
         ApiResponse<AlunoDto> response = new ApiResponse<>(UUID.randomUUID().toString(), "Aluno criado com sucesso!", alunoDto);
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping
+    @PutMapping("/atualizar")
     public ResponseEntity<ApiResponse<AlunoDto>> Atualizar(@RequestBody @Valid AlunoModel alunoExistente) {
         AlunoDto alunoDto = alunoService.atualizar(alunoExistente);
         ApiResponse<AlunoDto> response = new ApiResponse<>(UUID.randomUUID().toString(), "Aluno atualizado com sucesso!", alunoDto);
